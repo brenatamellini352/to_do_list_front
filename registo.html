@@ -3,12 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registo To_do_App</title>
+    <title>Criar Conta - To_do_App</title>
     <link rel="stylesheet" href="Lista_de_Tarefas/css/reset.css">
     <link rel="stylesheet" href="Lista_de_Tarefas/css/estilo.css">
     <link rel="stylesheet" href="Lista_de_Tarefas/css/auth.css">
 </head>
-<body>
-    
+<body class="auth_page">
+    <div class="auth_card">
+        <div class="auth_header">
+            <h1 class="auth_title">Criar Conta</h1>
+            <p class="auth_subtitle">Cria uma conta para começar a organizar as tuas listas.</p>
+        </div>
+        <form id="register_form" class="auth_form" novalidate>
+            <div class="form_group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="O teu nome" autocomplete="name" required>
+                <span class="field_error" id="name_error"></span>
+            </div>
+            <div class="form_group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@email.com" autocomplete="email" required>
+                <span class="field_error" id="email_error"></span>
+            </div>
+            <div class="form_group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="A tua senha" autocomplete="new-password" required>
+                <span class="field_error" id="password_error"></span>
+            </div>
+            <div class="form_group">
+                <label for="confirm_password">Confirmar Senha</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Repete a tua senha" autocomplete="new-password" required>
+                <span class="field_error" id="confirm_password_error"></span>
+            </div>
+            <div class="form_error" id="form_error" hidden></div>
+            <button type="submit" class="btn btn-primary btn-full">Criar Conta</button>
+        </form>
+        <p class="auth_link">Já tens uma conta? 
+            <a href="login.html">Faz login aqui</a></p>
+    </div>
+    <script src="Lista_de_Tarefas/js/auth.js"></script>
 </body>
 </html>
